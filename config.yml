@@ -1,0 +1,10 @@
+ravelry_user: yenzie
+ravelry_key: get it at http://www.ravelry.com/help/api
+
+appname: "YarnLine"
+
+charset: "UTF-8"
+
+template: "mason"
+
+serializer: JSON

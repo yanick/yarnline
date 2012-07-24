@@ -1,0 +1,25 @@
+# YarnLine: A Timeline of Your Ravelry Projects
+
+YarnLine is a happy mashup of [Timeline JS](http://timeline.verite.co/)
+and [Ravelry](http://www.ravelry.com).  It takes your projects and 
+display them in a slick and purty timeline.
+
+**NOTE**  Right now, `YarnLine` uses the web service endpoint
+given [there](http://www.ravelry.com/help/api), which only works 
+for yourself.  A version working for any user is forthcoming.
+
+
+## How to install and run
+
+1. Run 'perl ./Build.PL && ./Build installdeps'
+
+2. Change the ravelry username and key in 'config.yml' for your username and
+    the key given at http://www.ravelry.com/help/api
+
+3. Run the single-thread web server: 'perl ./bin/app.pl'
+
+4. Point your browser to 'http://localhost:3000' and enjoy!
+
+
+
+
