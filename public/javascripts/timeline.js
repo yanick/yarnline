@@ -141,7 +141,7 @@ if (typeof VMM == 'undefined') {
 		},
 		
 		timers: {
-			api:			7000
+			api:			70000
 		},
 		
 		api:	{
@@ -521,7 +521,7 @@ if(typeof VMM != 'undefined') {
 	VMM.getJSON = function(url, data, callback) {
 		if( typeof( jQuery ) != 'undefined' ){
 			jQuery.ajaxSetup({
-			     timeout: 3000
+			     timeout: 300000
 			});
 			/* CHECK FOR IE
 			================================================== */

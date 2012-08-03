@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Yarnline</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    h1 { text-align: center; }
+    p {
+        font-size: 13pt;
+        margin-left: 15%;
+        margin-right: 15%;
+        text-align: justified;
+    }
+</style>
+</head>
+<body>
+
+<h1>Yarnline</h1>
+
+<p>Welcome to Yarline, a little mashup that takes your (or anybody else's) projects on Ravelry and 
+show them to you as a timeline looking like this:</p>
+
+<div align="center">
+<img src="/images/screenshot.png" alt="yarnline screenshot" />
+</div>
+
+<p>How to use it? Dirt simple: click on the '<i>authenticate</i>' button
+below, confirms that you'll allow this app to do its thing (we're only peeking
+in project lists and not doing anything else, I swear) and... voil&agrave;. To
+look at the timeline of anybody else but you, put their ravelry username in 
+the top-right box and click on '<i>generate</i>'.</p>
+
+<p>Happy Yarlining!</p>
+
+<div align="center">
+    <form method="GET" action="/auth">
+        <input type="submit" value="authenticate" />
+    </form>
+</div>
+
+</body>
+</html>

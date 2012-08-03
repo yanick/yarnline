@@ -24,10 +24,24 @@ $username
 				-webkit-box-shadow:0 0px 0px rgba(0, 0, 0, 0.25) !important;
 				box-shadow:0px 0px 0px rgba(0, 0, 0, 0.25) !important;
 			}
+
+            #genbox {
+                font-family: Arial, sans-serif;
+                //font-size: 12pt;
+                text-align: right;
+                padding: 1em;
+            }
 			
 		</style>
 		
 	</head>
+
+    <div id="genbox">
+        <form method="GET" action="/timeline">
+        <label for="raveler">another yarnline: </label>
+        <input name="raveler" type="text" size="15" placeholder="raveler's id"/>
+            <input type="submit" value="generate" /></form>
+    </div>
 
 	<body>
 		<!-- BEGIN Timeline Embed -->
