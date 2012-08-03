@@ -13,7 +13,7 @@ for yourself.  A version working for any user is forthcoming.
 
 1. Run 'perl ./Build.PL && ./Build installdeps'
 
-2. Change the ravelry username and key in 'config.yml' for your username and
+2. Change the ravelry consumer key and secret in 'config.yml' for yours.
     the key given at http://www.ravelry.com/help/api
 
 3. Run the single-thread web server: 'perl ./bin/app.pl'

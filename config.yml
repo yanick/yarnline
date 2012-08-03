@@ -1,10 +1,28 @@
-ravelry_user: yenzie
-ravelry_key: get it at http://www.ravelry.com/help/api
-
 appname: "YarnLine"
 
 charset: "UTF-8"
 
 template: "mason"
 
+ravelry:
+    tokens:
+        consumer_key: secret 
+        consumer_secret: secret as well
+    urls:
+        authorization_url: https://www.ravelry.com/oauth/authorize
+        request_token_url: https://www.ravelry.com/oauth/request_token
+        access_token_url: https://www.ravelry.com/oauth/access_token
+    callback: /auth/callback
+
 serializer: JSON
+
+session: CHI
+session_expires: "30 days"
+session_CHI:
+    use_plugin: 1
+
+plugins:
+    'Cache::CHI':
+        driver: File
+        global: 1
+        root_dir: /home/yanick/work/YarnLine/cache
