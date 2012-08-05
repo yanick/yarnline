@@ -1,6 +1,8 @@
 package YarnLine;
 use Dancer ':syntax';
 
+use lib 'views';
+
 use Dancer::Plugin::Cache::CHI;
 
 use 5.10.0;
@@ -16,13 +18,15 @@ use Data::Printer;
 use Net::OAuth::Client;
 use Net::OAuth::AccessToken;
 
+use Index;
+
 sub auth_client();
 sub access_token();
 
 get '/' => sub {
     return redirect '/timeline/'.session 'username' if session 'username';
 
-    template 'index';
+    return Index->new->render('page');
 };
 
 
@@ -50,12 +54,11 @@ get '/timeline' => sub {
 };
 
 get '/timeline/:raveler' => sub {
-    redirect '/' unless session 'username';
+#redirect '/' unless session 'username';
 
-    template 'timeline.mason' => {
-        username => param( 'raveler' ),
-    };
-    
+    use Timeline;
+
+    return Timeline->new( pretty_render => 1, username => param('raveler') )->render('page');
 };
 
 get '/timeline/:raveler/data.json' => sub {
