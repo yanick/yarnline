@@ -49,13 +49,25 @@ template genbox => method {
             input { 
                 attr name => 'raveler', type => 'text', size => 15,
                      placeholder => "raveler's id"; };
-            input { attr type => 'submit', value => 'generate'; };
-            };
+            submit 'generate'; 
         };
+    };
 };
 
 template style => method {
-    css q[
+    less q[
+            .rounded-corners(@radius: 0px) {
+				-webkit-border-radius:@radius !important;
+				-moz-border-radius:@radius !important;
+				border-radius:@radius !important;
+            }
+
+            .shadow {
+				-moz-box-shadow:0 0px 0px rgba(0, 0, 0, 0.25) !important;
+				-webkit-box-shadow:0 0px 0px rgba(0, 0, 0, 0.25) !important;
+				box-shadow:0px 0px 0px rgba(0, 0, 0, 0.25) !important;
+            }
+
 			html, body {
 				height:100%;
 				padding: 0px;
@@ -65,20 +77,14 @@ template style => method {
 				margin:0px !important;
 				border:0px solid #CCC !important;
 				padding:0px !important;
-				-webkit-border-radius:0px !important;
-				-moz-border-radius:0px !important;
-				border-radius:0px !important;
-				-moz-box-shadow:0 0px 0px rgba(0, 0, 0, 0.25) !important;
-				-webkit-box-shadow:0 0px 0px rgba(0, 0, 0, 0.25) !important;
-				box-shadow:0px 0px 0px rgba(0, 0, 0, 0.25) !important;
+                .rounded-corners;
+                .shadow;
 			}
 
             #genbox {
                 font-family: Arial, sans-serif;
-                //font-size: 12pt;
                 text-align: right;
                 padding: 1em;
             }
-			
 ];
 };

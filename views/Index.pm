@@ -38,7 +38,7 @@ Welcome to Yarline, a little mashup that takes your (or anybody else's) projects
 show them to you as a timeline looking like this: };
 
    div_center { 
-       image  "/images/screenshot.png", alt=> "yarnline screenshot";
+       image  "/images/screenshot.png", alt => "yarnline screenshot";
    };
 
    markdown q{
@@ -51,15 +51,16 @@ the top-right box and click on '*generate*'.
 Happy Yarlining!
 };
 
+    $self->show( 'auth_form' );
+
+};
+
+template auth_form => sub {
     div_center { 
-        form {
-            attr method => 'GET', action => '/auth';
-            input {
-                attr type => 'submit', value => 'authenticate';
-            };
+        form { attr method => 'GET', action => '/auth';
+            submit 'authenticate';
         }
     };
-
 };
 
 __PACKAGE__->meta->make_immutable;
